@@ -39,3 +39,12 @@ The necessary styles are already defined in `css/style.css`.
   - `padding-top: 40px;` (Space below the line)
   - `margin-top: 40px;` (Space above the line)
   - `min-height: 300px;`
+
+## Main Layout Structure
+
+The main layout of the application is defined in `index.html` and consists of two primary components within the `.main-container`:
+
+-   **`.sidebar`**: The navigation bar on the left. It contains the main navigation links for the site.
+-   **`.content`**: The main content area on the right. This is where the content for each page is dynamically loaded.
+
+**Styling Note:** These two components are visually distinct. Any styling applied to the content area (such as borders or backgrounds) should target the `.content` class specifically and should **not** include the `.sidebar`. The parent `.page-container` is used for overall alignment and should not have visual styles like borders that might incorrectly group the sidebar and content together.
