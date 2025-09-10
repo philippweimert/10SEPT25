@@ -277,7 +277,7 @@ body {
 .hexagon {
     width: 90px;
     height: 90px;
-    background-color: #001f3f;
+    background-color: white;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     align-items: center;
@@ -293,7 +293,11 @@ body {
     height: 45px;
 }
 .hexagon svg path {
-    fill: white;
+    fill: #001f3f;
+    stroke: #001f3f;
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-linecap: round;
 }
 .company-label {
     color: white;
