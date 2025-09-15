@@ -190,6 +190,10 @@ body {
 }
 
 /* bAV Page Specific Styles */
+.page-title-container {
+    position: relative;
+}
+
 .page-title {
     color: var(--color-neutral-900);
     font-size: var(--font-size-h2);
@@ -341,8 +345,27 @@ body {
 }
 
 .section {
-    border-top: 1px solid var(--color-neutral-200);
+    position: relative;
     padding: var(--spacing-8) 0;
+}
+
+.section::before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: var(--color-primary);
+    margin-bottom: var(--spacing-6);
+}
+
+.placeholder-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0.5;
 }
 .section-title {
     color: var(--color-neutral-900);
@@ -833,4 +856,54 @@ input:checked + .slider:before {
         flex-direction: column;
         gap: 60px;
     }
+}
+
+/* Generic Two-Column Layout */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-6);
+    align-items: flex-start;
+}
+
+.two-column-layout .left-column {
+    text-align: left;
+}
+
+.two-column-layout .right-column {
+    /* Empty for now */
+}
+
+@media (max-width: 992px) {
+    .two-column-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Style modifiers for two-column layout refactoring */
+.hero-section--no-padding {
+    padding-bottom: 0;
+    margin-top: 0;
+}
+
+.hero-text-content--left {
+    text-align: left;
+    max-width: 100%;
+    margin: 0;
+}
+
+.hero-title--page-title {
+    font-size: var(--font-size-h2);
+}
+
+.hero-subtext--standard-margin {
+    margin: var(--spacing-4) 0;
+}
+
+.button-row--left {
+    justify-content: flex-start;
+}
+
+.company-types--left {
+    justify-content: flex-start;
 }
