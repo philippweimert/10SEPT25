@@ -834,3 +834,42 @@ input:checked + .slider:before {
         gap: 60px;
     }
 }
+
+/* Custom styles for Home Page Content */
+.two-column-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-5);
+    margin-top: var(--spacing-4);
+}
+
+.advantage-card {
+    flex: 1;
+    min-width: 300px;
+    background: var(--color-neutral-0);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--border-radius-standard);
+    padding: var(--spacing-4);
+    transition: all 0.2s ease;
+}
+
+.advantage-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+}
+
+.advantage-card h3 {
+    font-size: var(--font-size-body);
+    text-align: center;
+    margin-bottom: var(--spacing-4);
+}
+
+.advantage-card ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: var(--font-size-caption);
+}
+
+.advantage-card li {
+    margin-bottom: var(--spacing-3);
+}
