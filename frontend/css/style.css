@@ -190,6 +190,10 @@ body {
 }
 
 /* bAV Page Specific Styles */
+.page-title-container {
+    position: relative;
+}
+
 .page-title {
     color: var(--color-neutral-900);
     font-size: var(--font-size-h2);
@@ -341,8 +345,27 @@ body {
 }
 
 .section {
-    border-top: 1px solid var(--color-neutral-200);
+    position: relative;
     padding: var(--spacing-8) 0;
+}
+
+.section::before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: var(--color-primary);
+    margin-bottom: var(--spacing-6);
+}
+
+.placeholder-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0.5;
 }
 .section-title {
     color: var(--color-neutral-900);
