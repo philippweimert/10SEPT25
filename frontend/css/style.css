@@ -835,41 +835,52 @@ input:checked + .slider:before {
     }
 }
 
-/* Custom styles for Home Page Content */
-.two-column-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-5);
-    margin-top: var(--spacing-4);
+/* Generic Two-Column Layout */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-6);
+    align-items: flex-start;
 }
 
-.advantage-card {
-    flex: 1;
-    min-width: 300px;
-    background: var(--color-neutral-0);
-    border: 1px solid var(--color-neutral-200);
-    border-radius: var(--border-radius-standard);
-    padding: var(--spacing-4);
-    transition: all 0.2s ease;
+.two-column-layout .left-column {
+    text-align: left;
 }
 
-.advantage-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-2);
+.two-column-layout .right-column {
+    /* Empty for now */
 }
 
-.advantage-card h3 {
-    font-size: var(--font-size-body);
-    text-align: center;
-    margin-bottom: var(--spacing-4);
+@media (max-width: 992px) {
+    .two-column-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
-.advantage-card ul {
-    list-style: none;
-    padding-left: 0;
-    font-size: var(--font-size-caption);
+/* Style modifiers for two-column layout refactoring */
+.hero-section--no-padding {
+    padding-bottom: 0;
+    margin-top: 0;
 }
 
-.advantage-card li {
-    margin-bottom: var(--spacing-3);
+.hero-text-content--left {
+    text-align: left;
+    max-width: 100%;
+    margin: 0;
+}
+
+.hero-title--page-title {
+    font-size: var(--font-size-h2);
+}
+
+.hero-subtext--standard-margin {
+    margin: var(--spacing-4) 0;
+}
+
+.button-row--left {
+    justify-content: flex-start;
+}
+
+.company-types--left {
+    justify-content: flex-start;
 }
